@@ -1,32 +1,57 @@
 import React from 'react'
 import './product.css'
+import { useStateValue } from './StateProvider'
+function Product({id,title,price,image,rating}) {
 
-function product() {
+    const [{basket},dispatch]=useStateValue(); 
+    console.log('this basket',basket)
+ const Addtobasket=()=> {
+     dispatch({
+         type: 'ADD_TO_BASKET',
+         item: {
+             id: id,
+             title:title,
+             image:image,
+             price:price,
+             rating:rating,
+         }
+     })
+     
+ }
+    
     return (
         <div className="product">
             <div className="product-info">
-                <p>The intelligent investor</p>
+                <p>{title}</p>
                 <p className="product-price">
                     <small>$</small>
-                    <strong>25</strong>
+                    <strong>{price}</strong>
                 </p>
 
             </div>
             <div className="product-rating">
-              <p className="fa fa-star"></p>
-              <p className="fa fa-star"></p>
+                {Array(rating)
+                .fill()
+                .map((_, i) => (
+                    <p>⭐</p>
+
+                ))}
+          
+            
+             
+            
             
           
             </div>
             <img className="product-img"
-            src="https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg"
+            src={image}
             alt=""/>
 
-            <button >Add to Basket</button>
+            <button onClick={Addtobasket} >Add to Basket</button>
 
             
         </div>
     )
 }
 
-export default product
+export default Product

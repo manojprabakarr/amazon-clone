@@ -21,6 +21,7 @@
 }
 
 .product-rating{
+    display: flex;
     color: orange;
     margin-bottom: 15px;
   
@@ -28,6 +29,8 @@
 .product-info{
     height: 100px;
     margin-bottom: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 .product >button{
     background-color: orange;
@@ -35,4 +38,6 @@
     border-color: orange;
     color: #111;
     margin-top: 10px;
+    height: 30px;
 }
+
