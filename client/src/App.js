@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Home from './components/Home'
 import Checkout from './components/checkout'
 import Login from './components/login'
+import Payment from './components/payment'
 import {auth} from '../src/firebase'
 import {useStateValue} from './components/StateProvider'
 
@@ -53,6 +54,11 @@ const [{},dispatch]=useStateValue();
 
             <Route exact path="/login">
               <Login/>
+            </Route>
+
+            <Route exact path="/payment">
+               <Header/>
+              <Payment/>
             </Route>
 
 
