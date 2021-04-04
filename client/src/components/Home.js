@@ -19,7 +19,7 @@ function Home() {
                 id="100"
                 title="The lean Startup"
                  price="19.50" 
-                image="https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg"
+                image="http://mattragland.com/wp-content/uploads/2013/01/final-cover-1.png"
                 rating={4}/>
 
                 <Product 
@@ -60,7 +60,7 @@ function Home() {
                     id="105"
                     title="mi laptop"
                     price="40"
-                    image="https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2021/03/mi-pro.png?fit=1200%2C765&ssl=1"
+                    image="https://images.news18.com/ibnlive/uploads/2020/06/1591879020_mi-notebook-14-horizon-edition-1.jpg"
                     rating={4}/>  
                     
 
